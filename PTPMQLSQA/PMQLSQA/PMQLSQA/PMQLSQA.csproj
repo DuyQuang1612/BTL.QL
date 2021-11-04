@@ -135,6 +135,10 @@
     <Compile Include="Migrations\202111020232456_IntialCreate.designer.cs">
       <DependentUpon>202111020232456_IntialCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111040317237_add_column_SanPham_NgaySanXuat.cs" />
+    <Compile Include="Migrations\202111040317237_add_column_SanPham_NgaySanXuat.Designer.cs">
+      <DependentUpon>202111040317237_add_column_SanPham_NgaySanXuat.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\PMQLSQADbContext.cs" />
@@ -202,6 +206,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202111020232456_IntialCreate.resx">
       <DependentUpon>202111020232456_IntialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111040317237_add_column_SanPham_NgaySanXuat.resx">
+      <DependentUpon>202111040317237_add_column_SanPham_NgaySanXuat.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
