@@ -7,13 +7,13 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PMQLSQA.Models;
-
+using PMQLSQA.Models.Process;
 namespace PMQLSQA.Controllers
 {
     public class HoaDonsController : Controller
     {
         private PMQLSQADbContext db = new PMQLSQADbContext();
-
+        private StringProcess e = new StringProcess();
         // GET: HoaDons
         public ActionResult Index()
         {
@@ -38,6 +38,17 @@ namespace PMQLSQA.Controllers
         // GET: HoaDons/Create
         public ActionResult Create()
         {
+            var x2 = db.HoaDons.ToList();
+            if (x2.Count == 0)
+            {
+                ViewBag.MaHoaDon = "STT001";
+            }
+            else
+            {
+                var y2 = x2.OrderByDescending(m => m.MaHoaDon).FirstOrDefault().MaHoaDon;
+                var newKey2 = e.AutoGenerateKey1(y2);
+                ViewBag.MaHoaDon = newKey2;
+            }
             return View();
         }
 
@@ -48,12 +59,22 @@ namespace PMQLSQA.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "MaHoaDon,NgayLapHoaDon,TenSanPham,DonGia,SoLuongSanPham,KhachHang,NhanVienLapHoaDon")] HoaDon hoaDon)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.HoaDons.Add(hoaDon);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    db.HoaDons.Add(hoaDon);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
+            catch (Exception)
+            {
+
+                ModelState.AddModelError("", "Khoa chinh bi trung,vui long nhap lai");
+                return View(hoaDon);
+            }
+
 
             return View(hoaDon);
         }

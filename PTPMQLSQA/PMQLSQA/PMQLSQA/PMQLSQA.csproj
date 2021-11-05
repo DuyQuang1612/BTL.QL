@@ -158,6 +158,7 @@
     <Compile Include="Models\HoaDon.cs" />
     <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Models\PMQLSQADbContext.cs" />
+    <Compile Include="Models\Process\StringProcess.cs" />
     <Compile Include="Models\SanPham.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -7,12 +7,14 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using PMQLSQA.Models;
+using PMQLSQA.Models.Process;
 
 namespace PMQLSQA.Controllers
 {
     public class SanPhamsController : Controller
     {
         private PMQLSQADbContext db = new PMQLSQADbContext();
+        private StringProcess c = new StringProcess();
 
         // GET: SanPhams
         public ActionResult Index()
@@ -38,6 +40,17 @@ namespace PMQLSQA.Controllers
         // GET: SanPhams/Create
         public ActionResult Create()
         {
+            var x = db.SanPhams.ToList();
+            if (x.Count == 0)
+            {
+                ViewBag.MaSanPham = "STT001";
+            }
+            else
+            {
+                var y = x.OrderByDescending(m => m.MaSanPham).FirstOrDefault().MaSanPham;
+                var newKey = c.AutoGenerateKey(y);
+                ViewBag.MaSanPham = newKey;
+            }
             return View();
         }
 
@@ -48,12 +61,22 @@ namespace PMQLSQA.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "MaSanPham,TenSanPham,GiaSanPham,XuatSu,SoLuong,NgaySanXuat")] SanPham sanPham)
         {
-            if (ModelState.IsValid)
+            try
             {
-                db.SanPhams.Add(sanPham);
-                db.SaveChanges();
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    db.SanPhams.Add(sanPham);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
             }
+            catch (Exception)
+            {
+
+                ModelState.AddModelError("", "Khoa chinh bi trung,vui long nhap lai");
+                return View(sanPham);
+            }
+           
 
             return View(sanPham);
         }
