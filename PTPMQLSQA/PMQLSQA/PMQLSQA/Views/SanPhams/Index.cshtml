@@ -19,10 +19,13 @@
             @Html.DisplayNameFor(model => model.GiaSanPham)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.XuatSu)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.SoLuong)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.XuatSu)
+            @Html.DisplayNameFor(model => model.NgaySanXuat)
         </th>
         <th></th>
     </tr>
@@ -36,10 +39,13 @@
             @Html.DisplayFor(modelItem => item.GiaSanPham)
         </td>
         <td>
+            @Html.DisplayFor(modelItem => item.XuatSu)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.SoLuong)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.XuatSu)
+            @Html.DisplayFor(modelItem => item.NgaySanXuat)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.MaSanPham }) |

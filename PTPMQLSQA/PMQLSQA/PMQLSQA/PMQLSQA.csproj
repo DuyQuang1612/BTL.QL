@@ -126,7 +126,9 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HoaDonsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\NhanViensController.cs" />
     <Compile Include="Controllers\SanPhamsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -139,8 +141,22 @@
     <Compile Include="Migrations\202111040317237_add_column_SanPham_NgaySanXuat.Designer.cs">
       <DependentUpon>202111040317237_add_column_SanPham_NgaySanXuat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202111040840263_add_column_NhanVien_MaNhanVien.cs" />
+    <Compile Include="Migrations\202111040840263_add_column_NhanVien_MaNhanVien.Designer.cs">
+      <DependentUpon>202111040840263_add_column_NhanVien_MaNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111040849064_add_NhanVien.cs" />
+    <Compile Include="Migrations\202111040849064_add_NhanVien.Designer.cs">
+      <DependentUpon>202111040849064_add_NhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202111041409582_add_column_SanPham_MaSanPham.cs" />
+    <Compile Include="Migrations\202111041409582_add_column_SanPham_MaSanPham.Designer.cs">
+      <DependentUpon>202111041409582_add_column_SanPham_MaSanPham.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\HoaDon.cs" />
+    <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Models\PMQLSQADbContext.cs" />
     <Compile Include="Models\SanPham.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -181,6 +197,16 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\NhanViens\Create.cshtml" />
+    <Content Include="Views\NhanViens\Delete.cshtml" />
+    <Content Include="Views\NhanViens\Details.cshtml" />
+    <Content Include="Views\NhanViens\Edit.cshtml" />
+    <Content Include="Views\NhanViens\Index.cshtml" />
+    <Content Include="Views\HoaDons\Create.cshtml" />
+    <Content Include="Views\HoaDons\Delete.cshtml" />
+    <Content Include="Views\HoaDons\Details.cshtml" />
+    <Content Include="Views\HoaDons\Edit.cshtml" />
+    <Content Include="Views\HoaDons\Index.cshtml" />
     <Content Include="Views\SanPhams\Create.cshtml" />
     <Content Include="Views\SanPhams\Delete.cshtml" />
     <Content Include="Views\SanPhams\Details.cshtml" />
@@ -209,6 +235,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202111040317237_add_column_SanPham_NgaySanXuat.resx">
       <DependentUpon>202111040317237_add_column_SanPham_NgaySanXuat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111040840263_add_column_NhanVien_MaNhanVien.resx">
+      <DependentUpon>202111040840263_add_column_NhanVien_MaNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111040849064_add_NhanVien.resx">
+      <DependentUpon>202111040849064_add_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202111041409582_add_column_SanPham_MaSanPham.resx">
+      <DependentUpon>202111041409582_add_column_SanPham_MaSanPham.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

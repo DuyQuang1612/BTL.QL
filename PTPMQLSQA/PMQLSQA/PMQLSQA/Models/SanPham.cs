@@ -14,9 +14,11 @@ namespace PMQLSQA.Models
         public string MaSanPham { get; set; }
         public string TenSanPham { get; set; }
         public decimal GiaSanPham { get; set; }
+        public string XuatSu { get; set; }
         public int SoLuong { get; set; }
-        public string XuatSu { get; set; }     
+        [DataType(DataType.Date)]
         public DateTime NgaySanXuat { get; set; }
+
+
     }
 }
-//abc

@@ -169,3 +169,6 @@ E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.csproj.CopyComplete
 E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.dll
 E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.pdb
 E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.Migrations.add_column_SanPham_NgaySanXuat.resources
+E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.Migrations.add_column_NhanVien_MaNhanVien.resources
+E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.Migrations.add_NhanVien.resources
+E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.Migrations.add_column_SanPham_MaSanPham.resources

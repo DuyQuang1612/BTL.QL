@@ -10,107 +10,107 @@ using PMQLSQA.Models;
 
 namespace PMQLSQA.Controllers
 {
-    public class SanPhamsController : Controller
+    public class HoaDonsController : Controller
     {
         private PMQLSQADbContext db = new PMQLSQADbContext();
 
-        // GET: SanPhams
+        // GET: HoaDons
         public ActionResult Index()
         {
-            return View(db.SanPhams.ToList());
+            return View(db.HoaDons.ToList());
         }
 
-        // GET: SanPhams/Details/5
+        // GET: HoaDons/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SanPham sanPham = db.SanPhams.Find(id);
-            if (sanPham == null)
+            HoaDon hoaDon = db.HoaDons.Find(id);
+            if (hoaDon == null)
             {
                 return HttpNotFound();
             }
-            return View(sanPham);
+            return View(hoaDon);
         }
 
-        // GET: SanPhams/Create
+        // GET: HoaDons/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: SanPhams/Create
+        // POST: HoaDons/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaSanPham,TenSanPham,GiaSanPham,XuatSu,SoLuong,NgaySanXuat")] SanPham sanPham)
+        public ActionResult Create([Bind(Include = "MaHoaDon,NgayLapHoaDon,TenSanPham,DonGia,SoLuongSanPham,KhachHang,NhanVienLapHoaDon")] HoaDon hoaDon)
         {
             if (ModelState.IsValid)
             {
-                db.SanPhams.Add(sanPham);
+                db.HoaDons.Add(hoaDon);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(sanPham);
+            return View(hoaDon);
         }
 
-        // GET: SanPhams/Edit/5
+        // GET: HoaDons/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SanPham sanPham = db.SanPhams.Find(id);
-            if (sanPham == null)
+            HoaDon hoaDon = db.HoaDons.Find(id);
+            if (hoaDon == null)
             {
                 return HttpNotFound();
             }
-            return View(sanPham);
+            return View(hoaDon);
         }
 
-        // POST: SanPhams/Edit/5
+        // POST: HoaDons/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MaSanPham,TenSanPham,GiaSanPham,XuatSu,SoLuong,NgaySanXuat")] SanPham sanPham)
+        public ActionResult Edit([Bind(Include = "MaHoaDon,NgayLapHoaDon,TenSanPham,DonGia,SoLuongSanPham,KhachHang,NhanVienLapHoaDon")] HoaDon hoaDon)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(sanPham).State = EntityState.Modified;
+                db.Entry(hoaDon).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(sanPham);
+            return View(hoaDon);
         }
 
-        // GET: SanPhams/Delete/5
+        // GET: HoaDons/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            SanPham sanPham = db.SanPhams.Find(id);
-            if (sanPham == null)
+            HoaDon hoaDon = db.HoaDons.Find(id);
+            if (hoaDon == null)
             {
                 return HttpNotFound();
             }
-            return View(sanPham);
+            return View(hoaDon);
         }
 
-        // POST: SanPhams/Delete/5
+        // POST: HoaDons/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            SanPham sanPham = db.SanPhams.Find(id);
-            db.SanPhams.Remove(sanPham);
+            HoaDon hoaDon = db.HoaDons.Find(id);
+            db.HoaDons.Remove(hoaDon);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -1,0 +1,64 @@
+﻿@model IEnumerable<PMQLSQA.Models.HoaDon>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayLapHoaDon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenSanPham)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DonGia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuongSanPham)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KhachHang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhanVienLapHoaDon)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayLapHoaDon)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenSanPham)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DonGia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuongSanPham)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KhachHang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhanVienLapHoaDon)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaHoaDon }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaHoaDon }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaHoaDon })
+        </td>
+    </tr>
+}
+
+</table>

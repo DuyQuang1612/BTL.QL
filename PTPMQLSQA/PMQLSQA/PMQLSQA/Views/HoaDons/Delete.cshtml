@@ -1,4 +1,4 @@
-﻿@model PMQLSQA.Models.SanPham
+﻿@model PMQLSQA.Models.HoaDon
 
 @{
     ViewBag.Title = "Delete";
@@ -9,9 +9,17 @@
 
 <h3>Are you sure you want to delete this?</h3>
 <div>
-    <h4>SanPham</h4>
+    <h4>HoaDon</h4>
     <hr />
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayLapHoaDon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayLapHoaDon)
+        </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.TenSanPham)
         </dt>
@@ -21,35 +29,35 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.GiaSanPham)
+            @Html.DisplayNameFor(model => model.DonGia)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.GiaSanPham)
+            @Html.DisplayFor(model => model.DonGia)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.XuatSu)
+            @Html.DisplayNameFor(model => model.SoLuongSanPham)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.XuatSu)
+            @Html.DisplayFor(model => model.SoLuongSanPham)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.SoLuong)
+            @Html.DisplayNameFor(model => model.KhachHang)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.SoLuong)
+            @Html.DisplayFor(model => model.KhachHang)
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.NgaySanXuat)
+            @Html.DisplayNameFor(model => model.NhanVienLapHoaDon)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.NgaySanXuat)
+            @Html.DisplayFor(model => model.NhanVienLapHoaDon)
         </dd>
 
     </dl>
