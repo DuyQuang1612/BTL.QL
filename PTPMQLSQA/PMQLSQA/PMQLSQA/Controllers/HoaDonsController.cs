@@ -46,8 +46,9 @@ namespace PMQLSQA.Controllers
             else
             {
                 var y2 = x2.OrderByDescending(m => m.MaHoaDon).FirstOrDefault().MaHoaDon;
-                var newKey2 = e.AutoGenerateKey1(y2);
+                var newKey2 = e.AutoGenerateKey2(y2);
                 ViewBag.MaHoaDon = newKey2;
+
             }
             return View();
         }
@@ -67,15 +68,15 @@ namespace PMQLSQA.Controllers
                     db.SaveChanges();
                     return RedirectToAction("Index");
                 }
+
             }
             catch (Exception)
             {
 
+
                 ModelState.AddModelError("", "Khoa chinh bi trung,vui long nhap lai");
                 return View(hoaDon);
             }
-
-
             return View(hoaDon);
         }
 

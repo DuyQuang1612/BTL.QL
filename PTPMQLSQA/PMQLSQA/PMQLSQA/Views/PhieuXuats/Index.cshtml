@@ -1,0 +1,58 @@
+﻿@model IEnumerable<PMQLSQA.Models.PhieuXuat>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SanPhamXuat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuongXuat)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayXuatHang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NguoiBan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KhachHangMua)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.SanPhamXuat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuongXuat)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayXuatHang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NguoiBan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KhachHangMua)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaPhieuXuat }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaPhieuXuat }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaPhieuXuat })
+        </td>
+    </tr>
+}
+
+</table>

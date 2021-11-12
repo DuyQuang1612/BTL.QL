@@ -3,8 +3,12 @@
     "",
     "\\PMQLSQA",
     "\\PMQLSQA\\PMQLSQA",
-    "\\PMQLSQA\\PMQLSQA\\Models"
+    "\\PMQLSQA\\PMQLSQA\\Controllers",
+    "\\PMQLSQA\\PMQLSQA\\Models",
+    "\\PMQLSQA\\PMQLSQA\\Views",
+    "\\PMQLSQA\\PMQLSQA\\Views\\Accounts",
+    "\\PMQLSQA\\PMQLSQA\\Views\\SanPhams"
   ],
-  "SelectedNode": "\\PMQLSQA\\PMQLSQA\\Models\\Account.cs",
+  "SelectedNode": "\\PMQLSQA\\PMQLSQA.sln",
   "PreviewInSolutionExplorer": false
 }

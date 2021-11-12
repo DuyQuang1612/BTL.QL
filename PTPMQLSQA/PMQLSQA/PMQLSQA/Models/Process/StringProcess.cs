@@ -14,13 +14,13 @@ namespace PMQLSQA.Models.Process
             int a;
             numPart = Regex.Match(MaSanPham, @"\d+").Value;
             strPart = Regex.Match(MaSanPham, @"\D+").Value;
-             a = Convert.ToInt32(numPart) +1;
-            for(int i = 0; i<numPart.Length - a.ToString().Length; i++)
+            a = Convert.ToInt32(numPart) + 1;
+            for (int i = 0; i < numPart.Length - a.ToString().Length; i++)
             {
                 newNumpart += "0";
             }
             newNumpart += a;
-            newKey = strPart +newNumpart ;
+            newKey = strPart + newNumpart;
             return newKey;
         }
         public string AutoGenerateKey1(string MaNhanVien)
@@ -52,6 +52,51 @@ namespace PMQLSQA.Models.Process
             newNumpart2 += a2;
             newKey2 = strPart2 + newNumpart2;
             return newKey2;
+        }
+        public string AutoGenerateKey3(string MaUser)
+        {
+            string numPart3, strPart3, newKey3 = "", newNumpart3 = "";
+            int a3;
+            numPart3 = Regex.Match(MaUser, @"\d+").Value;
+            strPart3 = Regex.Match(MaUser, @"\D+").Value;
+            a3 = Convert.ToInt32(numPart3) + 1;
+            for (int i = 0; i < numPart3.Length - a3.ToString().Length; i++)
+            {
+                newNumpart3 += "0";
+            }
+            newNumpart3 += a3;
+            newKey3 = strPart3 + newNumpart3;
+            return newKey3;
+        }
+        public string AutoGenerateKey4(string MaPhieuNhap)
+        {
+            string numPart4, strPart4, newKey4 = "", newNumpart4 = "";
+            int a4;
+            numPart4 = Regex.Match(MaPhieuNhap, @"\d+").Value;
+            strPart4 = Regex.Match(MaPhieuNhap, @"\D+").Value;
+            a4 = Convert.ToInt32(numPart4) + 1;
+            for (int i = 0; i < numPart4.Length - a4.ToString().Length; i++)
+            {
+                newNumpart4 += "0";
+            }
+            newNumpart4 += a4;
+            newKey4 = strPart4 + newNumpart4;
+            return newKey4;
+        }
+        public string AutoGenerateKey5(string MaPhieuXuat)
+        {
+            string numPart5, strPart5, newKey5 = "", newNumpart5 = "";
+            int a5;
+            numPart5 = Regex.Match(MaPhieuXuat, @"\d+").Value;
+            strPart5 = Regex.Match(MaPhieuXuat, @"\D+").Value;
+            a5 = Convert.ToInt32(numPart5) + 1;
+            for (int i = 0; i < numPart5.Length - a5.ToString().Length; i++)
+            {
+                newNumpart5 += "0";
+            }
+            newNumpart5 += a5;
+            newKey5 = strPart5 + newNumpart5;
+            return newKey5;
         }
     }
 }

@@ -161,14 +161,10 @@ E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\bin\System.Web.WebPages.Razor.xml
 E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\bin\Newtonsoft.Json.xml
 E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\bin\Antlr3.Runtime.pdb
 E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.csprojAssemblyReference.cache
-E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.Migrations.IntialCreate.resources
-E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.csproj.GenerateResource.cache
 E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.csproj.CoreCompileInputs.cache
 E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.csproj.CopyComplete
 E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.dll
 E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.pdb
-E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.Migrations.add_column_SanPham_NgaySanXuat.resources
-E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.Migrations.add_column_NhanVien_MaNhanVien.resources
-E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.Migrations.add_NhanVien.resources
-E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.Migrations.add_column_SanPham_MaSanPham.resources
+E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.csprojAssemblyReference.cache
+E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.Migrations.add_column_PhieuNhap_MaPhieuNhap.resources
+E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.csproj.GenerateResource.cache

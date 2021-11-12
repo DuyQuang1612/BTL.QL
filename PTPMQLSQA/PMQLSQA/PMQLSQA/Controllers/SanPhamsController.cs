@@ -59,7 +59,7 @@ namespace PMQLSQA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaSanPham,TenSanPham,GiaSanPham,XuatSu,SoLuong,NgaySanXuat")] SanPham sanPham)
+        public ActionResult Create([Bind(Include = "MaSanPham,TenSanPham,GiaSanPham,XuatXu,SoLuong,NgaySanXuat")] SanPham sanPham)
         {
             try
             {
@@ -101,7 +101,7 @@ namespace PMQLSQA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MaSanPham,TenSanPham,GiaSanPham,XuatSu,SoLuong,NgaySanXuat")] SanPham sanPham)
+        public ActionResult Edit([Bind(Include = "MaSanPham,TenSanPham,GiaSanPham,XuatXu,SoLuong,NgaySanXuat")] SanPham sanPham)
         {
             if (ModelState.IsValid)
             {

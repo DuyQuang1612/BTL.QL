@@ -13,7 +13,7 @@ namespace PMQLSQA.Controllers
     public class NhanViensController : Controller
     {
         private PMQLSQADbContext db = new PMQLSQADbContext();
-        private StringProcess d = new StringProcess();
+        private StringProcess b = new StringProcess();
         // GET: NhanViens
         public ActionResult Index()
         {
@@ -46,8 +46,9 @@ namespace PMQLSQA.Controllers
             else
             {
                 var y1 = x1.OrderByDescending(m => m.MaNhanVien).FirstOrDefault().MaNhanVien;
-                var newKey1 = d.AutoGenerateKey1(y1);
+                var newKey1 = b.AutoGenerateKey1(y1);
                 ViewBag.MaNhanVien = newKey1;
+
             }
             return View();
         }
@@ -57,7 +58,7 @@ namespace PMQLSQA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaNhanVien,TenNhanVien,GioiTinh,SoDienThoai,TenDangNhapNhanVien,MatKhauNhanVien")] NhanVien nhanVien)
+        public ActionResult Create([Bind(Include = "MaNhanVien,TenNhanVien,GioiTinh,SoDienThoai,TenDangNhapNhanVien,MatKhauNhanVien,ConfirmMatKhauNhanVien")] NhanVien nhanVien)
         {
             try
             {
@@ -67,6 +68,7 @@ namespace PMQLSQA.Controllers
                     db.SaveChanges();
                     return RedirectToAction("Index");
                 }
+
             }
             catch (Exception)
             {
@@ -74,7 +76,6 @@ namespace PMQLSQA.Controllers
                 ModelState.AddModelError("", "Khoa chinh bi trung,vui long nhap lai");
                 return View(nhanVien);
             }
-
             return View(nhanVien);
         }
 
@@ -98,7 +99,7 @@ namespace PMQLSQA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MaNhanVien,TenNhanVien,GioiTinh,SoDienThoai,TenDangNhapNhanVien,MatKhauNhanVien")] NhanVien nhanVien)
+        public ActionResult Edit([Bind(Include = "MaNhanVien,TenNhanVien,GioiTinh,SoDienThoai,TenDangNhapNhanVien,MatKhauNhanVien,ConfirmMatKhauNhanVien")] NhanVien nhanVien)
         {
             if (ModelState.IsValid)
             {

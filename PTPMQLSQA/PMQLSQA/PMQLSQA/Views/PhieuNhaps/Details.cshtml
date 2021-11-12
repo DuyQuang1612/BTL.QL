@@ -1,0 +1,59 @@
+﻿@model PMQLSQA.Models.PhieuNhap
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PhieuNhap</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SanPhamNhap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SanPhamNhap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuongNhap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongNhap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayNhapHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayNhapHang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NguoiNhap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NguoiNhap)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhaCungCap)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhaCungCap)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaPhieuNhap }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

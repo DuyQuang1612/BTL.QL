@@ -14,9 +14,11 @@ namespace PMQLSQA.Models
         }
 
         public virtual DbSet<Account> Accounts { get; set; }
-        public virtual DbSet<SanPham> SanPhams { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
+        public virtual DbSet<SanPham> SanPhams { get; set; }
+        public virtual DbSet<PhieuNhap> PhieuNhaps { get; set; }
+        public virtual DbSet<PhieuXuat> PhieuXuats { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Account>()
@@ -27,6 +29,9 @@ namespace PMQLSQA.Models
             .IsUnicode(false);
             modelBuilder.Entity<NhanVien>()
             .Property(e => e.MaNhanVien)
+            .IsUnicode(false);
+            modelBuilder.Entity<NhanVien>()
+            .Property(e => e.TenDangNhapNhanVien)
             .IsUnicode(false);
             modelBuilder.Entity<HoaDon>()
             .Property(e => e.MaHoaDon)
