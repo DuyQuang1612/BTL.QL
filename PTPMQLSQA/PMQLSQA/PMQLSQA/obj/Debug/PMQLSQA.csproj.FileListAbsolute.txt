@@ -166,5 +166,5 @@ E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.csproj.CopyComplete
 E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.dll
 E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.pdb
 E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.csprojAssemblyReference.cache
-E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.Migrations.add_column_PhieuNhap_MaPhieuNhap.resources
+E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.Migrations.add_column_Account_Username.resources
 E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.csproj.GenerateResource.cache

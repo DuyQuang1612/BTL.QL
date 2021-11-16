@@ -127,6 +127,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AccountsController.cs" />
+    <Compile Include="Controllers\CreateAccountsController.cs" />
     <Compile Include="Controllers\HoaDonsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\NhanViensController.cs" />
@@ -136,12 +137,14 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202111121403200_add_column_PhieuNhap_MaPhieuNhap.cs" />
-    <Compile Include="Migrations\202111121403200_add_column_PhieuNhap_MaPhieuNhap.Designer.cs">
-      <DependentUpon>202111121403200_add_column_PhieuNhap_MaPhieuNhap.cs</DependentUpon>
+    <Compile Include="Migrations\202111160555445_add_column_Account_Username.cs" />
+    <Compile Include="Migrations\202111160555445_add_column_Account_Username.Designer.cs">
+      <DependentUpon>202111160555445_add_column_Account_Username.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
+    <Compile Include="Models\CreateAccount.cs" />
+    <Compile Include="Models\Encytion.cs" />
     <Compile Include="Models\HoaDon.cs" />
     <Compile Include="Models\NhanVien.cs" />
     <Compile Include="Models\PhieuNhap.cs" />
@@ -202,11 +205,6 @@
     <Content Include="Views\SanPhams\Details.cshtml" />
     <Content Include="Views\SanPhams\Edit.cshtml" />
     <Content Include="Views\SanPhams\Index.cshtml" />
-    <Content Include="Views\Accounts\Create.cshtml" />
-    <Content Include="Views\Accounts\Delete.cshtml" />
-    <Content Include="Views\Accounts\Details.cshtml" />
-    <Content Include="Views\Accounts\Edit.cshtml" />
-    <Content Include="Views\Accounts\Index.cshtml" />
     <Content Include="Views\PhieuXuats\Create.cshtml" />
     <Content Include="Views\PhieuXuats\Delete.cshtml" />
     <Content Include="Views\PhieuXuats\Details.cshtml" />
@@ -217,6 +215,18 @@
     <Content Include="Views\PhieuNhaps\Details.cshtml" />
     <Content Include="Views\PhieuNhaps\Edit.cshtml" />
     <Content Include="Views\PhieuNhaps\Index.cshtml" />
+    <Content Include="Views\CreateAccounts\Create.cshtml" />
+    <Content Include="Views\CreateAccounts\Delete.cshtml" />
+    <Content Include="Views\CreateAccounts\Details.cshtml" />
+    <Content Include="Views\CreateAccounts\Edit.cshtml" />
+    <Content Include="Views\CreateAccounts\Index.cshtml" />
+    <Content Include="Views\Accounts\Create.cshtml" />
+    <Content Include="Views\Accounts\Delete.cshtml" />
+    <Content Include="Views\Accounts\Details.cshtml" />
+    <Content Include="Views\Accounts\Edit.cshtml" />
+    <Content Include="Views\Accounts\Index.cshtml" />
+    <Content Include="Views\Accounts\Register.cshtml" />
+    <Content Include="Views\Accounts\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -235,8 +245,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202111121403200_add_column_PhieuNhap_MaPhieuNhap.resx">
-      <DependentUpon>202111121403200_add_column_PhieuNhap_MaPhieuNhap.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202111160555445_add_column_Account_Username.resx">
+      <DependentUpon>202111160555445_add_column_Account_Username.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

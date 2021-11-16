@@ -6,22 +6,79 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 using PMQLSQA.Models;
-using PMQLSQA.Models.Process;
+
 namespace PMQLSQA.Controllers
 {
     public class AccountsController : Controller
     {
         private PMQLSQADbContext db = new PMQLSQADbContext();
-        private StringProcess f = new StringProcess();
+        private Encytion encry = new Encytion();
         // GET: Accounts
+        [HttpGet]
+        public ActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [AllowAnonymous]
+
+        public ActionResult Register(Account acc)
+        {
+            if (ModelState.IsValid)
+            {
+                //mã hóa mật khẩu trước khi lưu vào database
+                acc.Password = encry.PasswordEncrytion(acc.Password);
+                db.Accounts.Add(acc);
+                db.SaveChanges();
+                return RedirectToAction("Login", "Account");
+            }
+            return View(acc);
+        }
+        [HttpGet]
+
+        public ActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        [AllowAnonymous]
+        public ActionResult Login(Account acc)
+        {
+            if (ModelState.IsValid)
+            {
+                string encrytionpass = encry.PasswordEncrytion(acc.Password);
+                var model = db.Accounts.Where(m => m.Username == acc.Username && m.Password == encrytionpass).ToList().Count();
+                //Thông tin đăng nhập chính xác
+                if (model == 1)
+                {
+                    FormsAuthentication.SetAuthCookie(acc.Username, true);
+                    return RedirectToAction("Index", "Home");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Thông tin đăng nhập không chính xác");
+                }
+            }
+            return View(acc);
+        }
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Home");
+        }
+
+
         public ActionResult Index()
         {
             return View(db.Accounts.ToList());
         }
 
         // GET: Accounts/Details/5
-        public ActionResult Details(int? id)
+        public ActionResult Details(string id)
         {
             if (id == null)
             {
@@ -38,18 +95,6 @@ namespace PMQLSQA.Controllers
         // GET: Accounts/Create
         public ActionResult Create()
         {
-            var x3 = db.Accounts.ToList();
-            if (x3.Count == 0)
-            {
-                ViewBag.MaUser = "STT001";
-            }
-            else
-            {
-                var y3 = x3.OrderByDescending(m => m.MaUser).FirstOrDefault().MaUser;
-                var newKey3 = f.AutoGenerateKey3(y3);
-                ViewBag.MaUser = newKey3;
-                
-            }
             return View();
         }
 
@@ -58,31 +103,20 @@ namespace PMQLSQA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaUser,FirstName,LastName,Email,Username,Password,ConfirmPassword")] Account account)
+        public ActionResult Create([Bind(Include = "Username,Password")] Account account)
         {
-
-            try
+            if (ModelState.IsValid)
             {
-                if (ModelState.IsValid)
-                {
-                    db.Accounts.Add(account);
-                    db.SaveChanges();
-                    return RedirectToAction("Index");
-                }
+                db.Accounts.Add(account);
+                db.SaveChanges();
+                return RedirectToAction("Index");
             }
-            catch (Exception)
-            {
-
-                ModelState.AddModelError("", "Khoa chinh bi trung,vui long nhap lai");
-                return View(account);
-            }
-
 
             return View(account);
         }
 
         // GET: Accounts/Edit/5
-        public ActionResult Edit(int? id)
+        public ActionResult Edit(string id)
         {
             if (id == null)
             {
@@ -101,7 +135,7 @@ namespace PMQLSQA.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MaUser,FirstName,LastName,Email,Username,Password,ConfirmPassword")] Account account)
+        public ActionResult Edit([Bind(Include = "Username,Password")] Account account)
         {
             if (ModelState.IsValid)
             {
@@ -113,7 +147,7 @@ namespace PMQLSQA.Controllers
         }
 
         // GET: Accounts/Delete/5
-        public ActionResult Delete(int? id)
+        public ActionResult Delete(string id)
         {
             if (id == null)
             {
@@ -130,7 +164,7 @@ namespace PMQLSQA.Controllers
         // POST: Accounts/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string id)
         {
             Account account = db.Accounts.Find(id);
             db.Accounts.Remove(account);

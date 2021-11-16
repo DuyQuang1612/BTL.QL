@@ -3,12 +3,21 @@ namespace PMQLSQA.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class add_column_PhieuNhap_MaPhieuNhap : DbMigration
+    public partial class add_column_Account_Username : DbMigration
     {
         public override void Up()
         {
             CreateTable(
                 "dbo.Account",
+                c => new
+                    {
+                        Username = c.String(nullable: false, maxLength: 128),
+                        Password = c.String(nullable: false),
+                    })
+                .PrimaryKey(t => t.Username);
+            
+            CreateTable(
+                "dbo.CreateAccount",
                 c => new
                     {
                         MaUser = c.String(nullable: false, maxLength: 128),
@@ -97,6 +106,7 @@ namespace PMQLSQA.Migrations
             DropTable("dbo.PhieuNhap");
             DropTable("dbo.NhanVien");
             DropTable("dbo.HoaDon");
+            DropTable("dbo.CreateAccount");
             DropTable("dbo.Account");
         }
     }
