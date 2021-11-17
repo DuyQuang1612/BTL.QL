@@ -11,11 +11,11 @@ using PMQLSQA.Models;
 
 namespace PMQLSQA.Controllers
 {
-    public class AccountsController : Controller
+    public class AccountController : Controller
     {
         private PMQLSQADbContext db = new PMQLSQADbContext();
         private Encytion encry = new Encytion();
-        // GET: Accounts
+        // GET: Account
         [HttpGet]
         public ActionResult Register()
         {
@@ -70,14 +70,12 @@ namespace PMQLSQA.Controllers
             FormsAuthentication.SignOut();
             return RedirectToAction("Index", "Home");
         }
-        //abc
-
         public ActionResult Index()
         {
             return View(db.Accounts.ToList());
         }
 
-        // GET: Accounts/Details/5
+        // GET: Account/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
@@ -92,13 +90,13 @@ namespace PMQLSQA.Controllers
             return View(account);
         }
 
-        // GET: Accounts/Create
+        // GET: Account/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: Accounts/Create
+        // POST: Account/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -115,7 +113,7 @@ namespace PMQLSQA.Controllers
             return View(account);
         }
 
-        // GET: Accounts/Edit/5
+        // GET: Account/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -130,7 +128,7 @@ namespace PMQLSQA.Controllers
             return View(account);
         }
 
-        // POST: Accounts/Edit/5
+        // POST: Account/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -146,7 +144,7 @@ namespace PMQLSQA.Controllers
             return View(account);
         }
 
-        // GET: Accounts/Delete/5
+        // GET: Account/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
@@ -161,7 +159,7 @@ namespace PMQLSQA.Controllers
             return View(account);
         }
 
-        // POST: Accounts/Delete/5
+        // POST: Account/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)

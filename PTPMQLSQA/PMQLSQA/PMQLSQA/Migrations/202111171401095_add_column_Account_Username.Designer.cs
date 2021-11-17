@@ -13,7 +13,7 @@ namespace PMQLSQA.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202111160555445_add_column_Account_Username"; }
+            get { return "202111171401095_add_column_Account_Username"; }
         }
         
         string IMigrationMetadata.Source

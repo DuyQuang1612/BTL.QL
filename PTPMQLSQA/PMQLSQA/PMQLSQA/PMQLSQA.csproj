@@ -126,7 +126,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Controllers\AccountsController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CreateAccountsController.cs" />
     <Compile Include="Controllers\HoaDonsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -137,9 +137,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202111160555445_add_column_Account_Username.cs" />
-    <Compile Include="Migrations\202111160555445_add_column_Account_Username.Designer.cs">
-      <DependentUpon>202111160555445_add_column_Account_Username.cs</DependentUpon>
+    <Compile Include="Migrations\202111171401095_add_column_Account_Username.cs" />
+    <Compile Include="Migrations\202111171401095_add_column_Account_Username.Designer.cs">
+      <DependentUpon>202111171401095_add_column_Account_Username.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Account.cs" />
@@ -220,13 +220,13 @@
     <Content Include="Views\CreateAccounts\Details.cshtml" />
     <Content Include="Views\CreateAccounts\Edit.cshtml" />
     <Content Include="Views\CreateAccounts\Index.cshtml" />
-    <Content Include="Views\Accounts\Create.cshtml" />
-    <Content Include="Views\Accounts\Delete.cshtml" />
-    <Content Include="Views\Accounts\Details.cshtml" />
-    <Content Include="Views\Accounts\Edit.cshtml" />
-    <Content Include="Views\Accounts\Index.cshtml" />
-    <Content Include="Views\Accounts\Register.cshtml" />
-    <Content Include="Views\Accounts\Login.cshtml" />
+    <Content Include="Views\Account\Create.cshtml" />
+    <Content Include="Views\Account\Delete.cshtml" />
+    <Content Include="Views\Account\Details.cshtml" />
+    <Content Include="Views\Account\Edit.cshtml" />
+    <Content Include="Views\Account\Index.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -245,8 +245,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202111160555445_add_column_Account_Username.resx">
-      <DependentUpon>202111160555445_add_column_Account_Username.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202111171401095_add_column_Account_Username.resx">
+      <DependentUpon>202111171401095_add_column_Account_Username.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
