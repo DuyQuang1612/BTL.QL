@@ -16,12 +16,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("Trang chủ", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Nhân viên", "Index", "NhanViens")</li>
+                    <li>@Html.ActionLink("Sản phẩm", "Index", "SanPhams")</li>
+                    <li>@Html.ActionLink("Đơn hàng", "Index", "DonHangs")</li>
+                    <li>@Html.ActionLink("Hóa đơn", "Index", "HoaDons")</li>
+                    <li>@Html.ActionLink("Phiếu Nhập", "Index", "PhieuNhaps")</li>
+                    <li>@Html.ActionLink("Phiếu Xuất", "Index", "PhieuXuats")</li>
+                    <li>@Html.ActionLink("Kho", "Index", "Khos")</li>
                     <li>@Html.ActionLink("Đăng kí", "Register", "Account")</li>
                     <li>@Html.ActionLink("Đăng nhập", "Login", "Account")</li>
                     <li>@Html.ActionLink("Đăng xuất", "Logout", "Account")</li>

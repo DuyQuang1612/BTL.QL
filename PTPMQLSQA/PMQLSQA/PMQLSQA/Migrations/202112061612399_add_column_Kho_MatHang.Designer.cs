@@ -7,13 +7,13 @@ namespace PMQLSQA.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class add_column_Account_Username : IMigrationMetadata
+    public sealed partial class add_column_Kho_MatHang : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(add_column_Account_Username));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(add_column_Kho_MatHang));
         
         string IMigrationMetadata.Id
         {
-            get { return "202111171401095_add_column_Account_Username"; }
+            get { return "202112061612399_add_column_Kho_MatHang"; }
         }
         
         string IMigrationMetadata.Source

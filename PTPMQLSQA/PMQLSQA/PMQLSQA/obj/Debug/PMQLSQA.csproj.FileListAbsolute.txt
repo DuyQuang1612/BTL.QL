@@ -168,3 +168,4 @@ E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.pdb
 E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.csprojAssemblyReference.cache
 E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.Migrations.add_column_Account_Username.resources
 E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.csproj.GenerateResource.cache
+E:\GitHub\BTL.QL\PTPMQLSQA\PMQLSQA\PMQLSQA\obj\Debug\PMQLSQA.Migrations.add_column_Kho_MatHang.resources

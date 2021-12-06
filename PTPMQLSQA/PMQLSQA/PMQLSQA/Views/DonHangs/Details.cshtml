@@ -1,0 +1,59 @@
+﻿@model PMQLSQA.Models.DonHang
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DonHang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuongSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KhachHangMua)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KhachHangMua)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhanVienLapDonHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhanVienLapDonHang)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NgayLapDonHang }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

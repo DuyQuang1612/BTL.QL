@@ -1,0 +1,65 @@
+﻿@model PMQLSQA.Models.DonHang
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DonHang</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoLuongSP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoLuongSP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KhachHangMua)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KhachHangMua)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhanVienLapDonHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhanVienLapDonHang)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
